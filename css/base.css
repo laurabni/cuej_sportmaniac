@@ -1,0 +1,198 @@
+/* ARTICLE */
+
+header {
+    height: 100%;
+    width: 100%;
+}
+
+.header__titre,
+.header__auteur,
+.header__source,
+.header__img {
+    position: relative;
+    z-index: 1;
+    /* Le texte et l'image seront au-dessus de la vidéo */
+    color: #fff;
+    /* Couleur du texte */
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#videoPlayerFooter {
+    height: 50%;
+    width: 80%;
+}
+
+.header__titre {
+    top: 650px;
+    left: 0px;
+    font-size: 64px;
+    width: 75%;
+}
+
+.header__auteur {
+    top: 740px;
+    left: 0px;
+    font-size: 20px;
+}
+
+.header__source {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 700px;
+    right: 0px;
+    font-size: 20px;
+}
+
+.header__img {
+    width: 50px;
+    height: 50px;
+    top: 600px;
+    left: 0px;
+    color: white;
+
+}
+
+.header__img--2 {
+    width: 50px;
+    height: 50px;
+    top: 600px;
+    left: 50px;
+    color: white;
+}
+
+.header__img--3 {
+    width: 50px;
+    height: 50px;
+    top: 600px;
+    left: 100px;
+    color: white;
+}
+
+
+.header__img img {
+    width: 50px;
+    height: 50px;
+}
+
+.header__texte * {
+    transition: opacity 0.3s ease-in;
+}
+
+.hidden * {
+    opacity: 0;
+}
+
+.container-menu-un {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3.5%;
+}
+
+@media screen and (max-width: 480px) {
+
+    .container-menu-un {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0.5%;
+    }
+}
+
+
+/* -------------------- COULEURS -------------------- */
+
+/* bannière couleur titre */
+
+h1.bleu {
+    background-color: #009DDC;
+}
+
+h1.jaune {
+    background-color: #EAA633;
+}
+
+h1.rouge {
+    background-color: #E85D75;
+}
+
+h1.violet {
+    background-color: #A469DE;
+}
+
+h1.vert {
+    background-color: #009B72;
+}
+
+/* bannière couleur auteur */
+
+.header__auteur.bleu {
+    background-color: #009DDC;
+}
+
+.header__auteur.jaune {
+    background-color: #EAA633;
+}
+
+.header__auteur.rouge {
+    background-color: #E85D75;
+}
+
+.header__auteur.violet {
+    background-color: #A469DE;
+}
+
+.header__auteur.vert {
+    background-color: #009B72;
+}
+
+/* bannière couleur auteur */
+
+.header__source.bleu {
+    background-color: #009DDC;
+}
+
+.header__source.jaune {
+    background-color: #EAA633;
+}
+
+.header__source.rouge {
+    background-color: #E85D75;
+}
+
+.header__source.violet {
+    background-color: #A469DE;
+}
+
+.header__source.vert {
+    background-color: #009B72;
+}
+
+/* bannière couleur img */
+
+img.bleu {
+    background-color: #009DDC;
+}
+
+img.jaune {
+    background-color: #EAA633;
+}
+
+img.rouge {
+    background-color: #E85D75;
+}
+
+img.violet {
+    background-color: #A469DE;
+}
+
+img.vert {
+    background-color: #009B72;
+}
+
+/* -------------------------------------------------- */

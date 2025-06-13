@@ -1,0 +1,272 @@
+/* ARTICLE */
+
+header {
+    height: 100%;
+    width: 100%;
+}
+
+.header__container {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.icones {
+    display: flex;
+    width: fit-content;
+    padding: 10px;
+}
+
+.header__texte {
+    position: absolute;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in;
+    top: 60vh;
+    width: 80%;
+    height: fit-content;
+}
+
+.header__source {
+    position: absolute;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in;
+    top: 90vh;
+    left: 95%;
+    width: 20%;
+}
+
+
+.header__item {
+    color: white;
+}
+
+.header__item--img {
+    width: 20px;
+    height: 20px;
+}
+
+.header__item--img:not(:first-child) {
+    margin-left: 1rem;
+}
+
+.header__item--titre {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px;
+    width: fit-content;
+}
+
+.header__item--auteur {
+    padding: 10px;
+    width: fit-content
+}
+
+.header__item--source {
+    padding: 10px;
+    margin-top: 0.2;
+    width: fit-content;
+    font-size: 10pt;
+    color: white;
+}
+
+#videoPlayer {
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.image {
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.header__img img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.hidden * {
+    opacity: 0;
+}
+
+
+/* -------------------- COULEURS -------------------- */
+
+.icones.vert {
+    background-color: #009B72;
+}
+
+.icones.bleu {
+    background-color: #009DDC;
+}
+
+.icones.rouge {
+    background-color: #E85D75;
+}
+
+.icones.jaune {
+    background-color: #EAA633;
+}
+
+.icones.violet {
+    background-color: #A469DE;
+}
+
+/* bannière couleur titre */
+
+h1.bleu {
+    background-color: #009DDC;
+}
+
+h1.jaune {
+    background-color: #EAA633;
+}
+
+h1.rouge {
+    background-color: #E85D75;
+}
+
+h1.violet {
+    background-color: #A469DE;
+}
+
+h1.vert {
+    background-color: #009B72;
+}
+
+h1.noir {
+    background-color: black;
+}
+
+/* bannière couleur auteur */
+
+.header__item--auteur.bleu {
+    background-color: #009DDC;
+}
+
+.header__item--auteur.jaune {
+    background-color: #EAA633;
+}
+
+.header__item--auteur.rouge {
+    background-color: #E85D75;
+}
+
+.header__item--auteur.violet {
+    background-color: #A469DE;
+}
+
+.header__item--auteur.vert {
+    background-color: #009B72;
+}
+
+.header__item--auteur.noir {
+    background-color: black;
+}
+
+/* bannière couleur auteur  */
+
+.header__item--source.bleu {
+    color: #009DDC;
+}
+
+.header__item--source.jaune {
+    color: #EAA633;
+}
+
+.header__item--source.rouge {
+    color: #E85D75;
+}
+
+.header__item--source.violet {
+    color: #A469DE;
+}
+
+.header__item--source.vert {
+    color: #009B72;
+}
+
+.header__item--source.noir {
+    color: white;
+}
+
+
+/* bannière couleur img */
+
+img.bleu {
+    background-color: #009DDC;
+}
+
+img.jaune {
+    background-color: #EAA633;
+}
+
+img.rouge {
+    background-color: #E85D75;
+}
+
+img.violet {
+    background-color: #A469DE;
+}
+
+img.vert {
+    background-color: #009B72;
+}
+
+/* -------------------------------------------------- */
+
+.icones-credit {
+    display: flex;
+    width: fit-content;
+    padding: 10px;
+}
+
+.header__item--titre-credit {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px;
+    width: fit-content;
+    background-color: black;
+}
+
+.header__item--auteur-credit {
+    padding: 10px;
+    width: fit-content
+}
+
+.header__item--source-credit {
+    padding: 10px;
+    margin-top: 2rem;
+    width: fit-content;
+    font-size: 10pt;
+    color: white;
+}

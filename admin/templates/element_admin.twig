@@ -1,0 +1,73 @@
+{% extends "base.twig" %}
+
+{% block main %}
+{% if article != null %}
+<h1>Contenu de l'article {{article.titre}}</h1>
+<table>
+	{% for element in elements %}
+	<tr>
+		<th class="gris">
+			<p>{{element.balise}}</p>
+		</th>
+		<th class="gris bouton">
+			{# <a class="btn btn-secondary" href="index.php?page=element&action=read&id={{ element.id }}"><i
+					class="bi bi-eye-fill"></i> Voir</a> #}
+			<a class="btn btn-outline-dark" href="index.php?page=element&action=edit&id={{ element.id }}"><i
+					class="bi bi-pencil-fill"></i> Modifier</a>
+			<a class="btn btn-outline-dark" href="index.php?page=element&action=delete&id={{ element.id }}"><i
+					class="bi bi-trash3-fill"></i> Supprimer</a>
+		</th>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<p>{{element.contenu}}</p>
+			{% if element.image %}
+			<img src="../images/uploads/{{element.image}}">
+			{% endif %}
+			{% if element.video %}
+			<video controls>
+				<source src="../images/uploads/{{ element.video }}" type="video/mp4">
+			</video>
+			{% endif %}
+		</td>
+	</tr>
+	{% endfor %}
+	<tr>
+		<th colspan="2">Ajouter un élément :&nbsp;&nbsp;
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_titre&id={{article.id}}"><i
+					class="bi bi-plus"></i>
+				titre</a>
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_intertitre&id={{article.id}}"><i
+					class="bi bi-plus"></i> intertitre</a>
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_paragraphe&id={{article.id}}"><i
+					class="bi bi-plus"></i> paragraphe</a>
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_image&id={{article.id}}"><i
+					class="bi bi-plus"></i>
+				image</a>
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_video&id={{article.id}}"><i
+					class="bi bi-plus"></i>
+				video</a>
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_audio&id={{article.id}}"><i
+					class="bi bi-plus"></i>
+				audio</a>
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_citation&id={{article.id}}"><i
+					class="bi bi-plus"></i> citation</a>
+			<a class="btn btn-secondary" href="index.php?page=element&action=new_chapo&id={{article.id}}"><i
+					class="bi bi-plus"></i>
+				chapo</a>
+		</th>
+	</tr>
+</table>
+<p class="center">
+	<a class="btn btn-secondary" href="index.php?page=theme&id={{article.id_theme}}">Retour à la liste des articles</a>
+</p>
+{% else %}
+
+{% for theme in themes %}
+<h5>{{theme.theme}}</h5>
+{% for article in theme.articles %}
+<p>{{article.titre}}</p>
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% endblock %}

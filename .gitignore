@@ -1,0 +1,35 @@
+# Fichiers et dossiers générés automatiquement
+/node_modules/
+vendor/
+dist/
+build/
+_site/
+resources/
+.hugo_build.lock
+
+# Fichiers temporaires et de configuration d'éditeur
+*.log
+*.tmp
+*.swp
+*.swo
+*.zip
+*.orig
+*.rej
+.DS_Store
+Thumbs.db
+.cache
+.idea/
+.vscode/
+*.sublime-*
+*.esproj
+
+# Fichiers de dépendances PHP
+composer.lock
+
+# Fichiers de dépendances JS
+package-lock.json
+yarn.lock
+
+# Autres fichiers à ignorer
+*.min.*
+*.map

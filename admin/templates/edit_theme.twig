@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2>Modifier un thème</h2>
+    <form action="index.php?page=theme&action=update" method="post">
+    <ul>
+		<input type="hidden" name="id" value="{{ theme.id }}">
+        <li>
+            <label for="theme">Saisisser le titre du thème</label>
+            <input type="text" name="theme" placeholder="Saisir un titre" value="{{ theme.theme }}">
+        </li>
+        <li>
+            <label for="couleur">Saisir la couleur du thème</label>
+            <input type="text" name="couleur" placeholder="Qui êtes vous?" value="{{ theme.couleur }}">
+        </li>
+        <input type="submit" value="Modifier le thème">
+    </ul>
+    </form>
+{% endblock %}

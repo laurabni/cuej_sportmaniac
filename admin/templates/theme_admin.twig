@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block main %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+<h1>Listes des thèmes</h1>
+
+<table>
+    <tr>
+        <th>Thème</th>
+        <th>Actions</th>
+    </tr>
+    {% for theme in themes %}
+    <tr>
+        <td class="texte">{{theme.theme}}</td>
+        <td>
+            <a class="btn btn-secondary" href="index.php?page=theme&action=read&id={{ theme.id }}"><i
+                    class="bi bi-eye-fill"></i>
+                Voir les articles</a>
+            <a class="btn btn-secondary" href="index.php?page=theme&action=edit&id={{ theme.id }}"><i
+                    class="bi bi-pencil-fill"></i>
+                Modifier</a>
+            {# <a class="btn btn-secondary" href="index.php?page=theme&action=delete&id={{ theme.id }}"><i
+                    class="bi bi-trash3-fill"></i>
+                Supprimer</a> #}
+        </td>
+    </tr>
+    {% endfor %}
+    {# <tr>
+        <td>&nbsp;</td>
+        <td>
+            <a class="btn btn-secondary" href="index.php?page=theme&action=new"><i class="bi bi-plus"></i>
+                Ajouter un thème</a>
+        </td>
+    </tr> #}
+</table>
+{% endblock %}

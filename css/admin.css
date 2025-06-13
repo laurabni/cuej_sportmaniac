@@ -1,0 +1,63 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Glory', sans-serif;
+	font-family: 'Inter', sans-serif;
+	font-family: 'Karla', sans-serif;
+}
+
+main {
+	width: 1200px;
+	margin: 10px auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+p.center {
+	text-align: center;
+}
+
+table {
+	margin: 30px auto;
+	border: 2px solid grey;
+}
+
+th {
+	border-bottom: 2px solid grey;
+	padding: 10px;
+	text-align: center;
+	font-size: larger;
+}
+
+th.bouton {
+	width: 280px;
+}
+
+th.gris {
+	background-color: #ccc;
+}
+
+td {
+	border-bottom: 2px solid grey;
+	padding: 5px;
+}
+
+td.texte {
+	min-width: 300px;
+}
+
+td img {
+	width: 80px;
+}
+
+td video {
+	width: 80px;
+}

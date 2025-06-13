@@ -1,0 +1,77 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2>Ajouter un élement</h2>
+	<form action="index.php?page=element&action=create" method="post">
+		<ul>
+			<li>
+				<label for="balise">Saisir la balise de votre Element</label>
+				<select name="balise">
+					<option value="h2">Titre niveau 2</option>
+					<option value="h3">Intertitre</option>
+					<option value="p">Châpo</option>
+					<option value="p">Citation / exergue</option>
+					<option value="p">Paragraphe</option>
+					<option value="img">Image</option>
+					<option value="video">Vidéo</option>
+					<option value="figcaption">Légende d'image</option>
+				</select>
+			</li>
+			<li>
+				<label for="contenu">Saisir votre contenu</label>
+				<textarea name="contenu" placeholder="Saisir un contenu"></textarea>
+			</li>
+			<li>
+				<label for="alt">Saisir le texte alternatif</label>
+				<input type="text" name="alt" placeholder="Saisir un texte alternatif">
+			</li>
+			<li>
+				<label for="src">Saisir le nom de votre photo ou audio</label>
+				<input type="text" name="src" placeholder="Saisir le nom de votre image ou audio">
+			</li>
+			<li>
+				<label for="href">Saisir le nom de votre vidéo</label>
+				<input type="text" name="href" placeholder="Saisir le nom de votre vidéo">
+			</li>
+			<li>
+				<label for="class">Saisir la mise en page</label>
+				<select name="class">
+					<option value="h2">Titre niveau 2</option>
+					<option value="h3">Intertitre</option>
+					<option value="p">Châpo</option>
+					<option value="p">Citation / exergue</option>
+					<option value="p">Paragraphe</option>
+					<option value="video">Video</option>
+					<option value="figcaption">Légende d'image</option>
+				</select>
+			</li>
+			<li>
+				<label for="class2">Saisir le placement de l'image</label>
+				<select name="class2">
+					<option value="h2">Titre niveau 2</option>
+					<option value="h3">Intertitre</option>
+					<option value="p">Châpo</option>
+					<option value="p">Citation / exergue</option>
+					<option value="p">Paragraphe</option>
+					<option value="video">Video</option>
+					<option value="figcaption">Légende d'image</option>
+				</select>
+			</li>
+			<li>
+				<label for="class3">Saisir la mise en page de la liégende</label>
+				<select name="class3">
+					<option value="h2">Centré</option>
+					<option value="h3">À gauche</option>
+				</select>
+			</li>
+			<li>
+				<label for="credit">Rentrer le crédit de la vidéo, l'image ou l'audio</label>
+				<input type="text" name="credit">
+			</li>
+
+			<input type="hidden" name="id_article" value="{{ id }}">
+
+			<input type="submit" value="Ajouter élément">
+		</ul>
+	</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+<div class="menu-desktop">
+	<div class="fond_index">
+		<img src="./images/accueil/page_accueil_V2.jpg">
+	</div>
+
+
+	<div class="container habillage_index">
+		<img src="./images/accueil/logo-accueil.png">
+		<br>
+		<a href="index.php?page=edito" class="btn btn-outline-light rounded-pill text-uppercase mb-3 fw-bold bouton-index">Voir l'édito</a>
+		<br>
+		<a href="index.php?page=accueil" class="btn btn-outline-light rounded-pill text-uppercase fw-bold bouton-index">Commencer</a>
+	</div>
+</div>
+
+<div class="menu-phone">
+	<img src="./images/accueil/page_accueil_telephone.jpg">
+	<img class="logo-index" src="./images/accueil/logo-accueil-2.png">
+	<a href="index.php?page=edito" class="bouton-index-phone">Voir l'édito</a>
+</div>
+{% endblock %}

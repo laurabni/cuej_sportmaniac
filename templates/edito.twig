@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+
+{% block edito %}
+	<a class="btn btn-outline-light rounded-pill button_edito" href="index.php?page=accueil">Retour à l'accueil</a>
+{% endblock %}
+
+{% block main %}
+
+	<div class="video_edito" id="videoPlayer">
+		<video autoplay muted preload="auto" controls src="./images/video/edito.mp4" type="video/mp4" id="video"></video>
+	</div>
+
+	<div class="header__texte">
+		<h1 class="header__item header__item--titre noir">ÉDITO</h1>
+		<p class="header__item header__item--auteur noir">Keziah Cretin & Guillaume Colleoni</p>
+		<p class="header__item header__item--source noir">Musique : Meydän, Synthwave Vibe</p>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2>Ajouter un élement</h2>
+	<form action="index.php?page=element&action=create" method="post">
+		<ul>
+			<input type="hidden" name="balise" value="h2">
+			<li>
+				<label for="contenu">Saisir votre contenu</label>
+				<textarea name="contenu" placeholder="Saisir un contenu"></textarea>
+			</li>
+
+			<input type="hidden" name="id_article" value="{{ id }}">
+
+			<input type="submit" value="Ajouter élément">
+		</ul>
+	</form>
+{% endblock %}

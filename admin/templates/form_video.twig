@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2>Ajouter un élement</h2>
+	<form action="index.php?page=element&action=create" method="post" enctype="multipart/form-data">
+
+		<ul>
+			<input type="hidden" name="balise" value="video">
+			<li>
+				<label for="video">Saisir votre vidéo</label>
+				<input type="file" name="video" placeholder="Saisir votre vidéo">
+			</li>
+			<li>
+				<label for="class">Saisir la mise en page</label>
+				<select name="class">
+					<option value="video__body">Vidéo horizontale</option>
+					<option value="video__verticale">Vidéo verticale</option>
+				</select>
+			</li>
+
+			<input type="hidden" name="id_article" value="{{ id }}">
+
+			<input type="submit" value="Ajouter élément">
+		</ul>
+	</form>
+{% endblock %}

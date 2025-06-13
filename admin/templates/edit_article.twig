@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2>Modifier un article</h2>
+<form action="index.php?page=article&action=update" method="post" enctype="multipart/form-data">
+
+		<ul>
+			<input type="hidden" name="id" value="{{ article.id }}">
+			<li>
+				<label for="titre">Saisisser le titre de l'article</label>
+				<input type="text" name="titre" placeholder="Saisir un titre" value="{{ article.titre }}">
+			</li>
+			<li>
+				<label for="signature">Dites nous qui écrit l'article</label>
+				<input type="text" name="signature" placeholder="Qui êtes vous?" value="{{ article.signature }}">
+			</li>
+			<li>
+				<label for="type1">Saisisser le type d'article N°1</label>
+				<input type="text" name="type1" placeholder="Saisir un type d'article" value="{{ article.type1 }}">
+			</li>
+			<li>
+				<label for="type2">Saisisser le type d'article N°2</label>
+				<input type="text" name="type2" placeholder="Saisir un type d'article" value="{{ article.type2 }}">
+			</li>
+			<li>
+				<label for="type3">Saisisser le type d'article N°3</label>
+				<input type="text" name="type3" placeholder="Saisir un type d'article" value="{{ article.type3 }}">
+			</li>
+			<li>
+				<label for="image">Téléverser l'image principal de l'article</label>
+				<input type="file" name="image" placeholder="Téléverser" value="{{ article.image }}">
+			</li>
+			<li>
+				<label for="video">Téléverser la vidéo principal de l'article</label>
+				<input type="file" name="video" placeholder="Téléverser" value="{{ article.video }}">
+			</li>
+			<li>
+				<label for="credit">Rentrer le crédit de l'image ou la vidéo</label>
+				<input type="text" name="credit" placeholder="Rentrer le crédit de l'image ou la vidéo" value="{{ article.credit}}">
+			</li>
+
+			<input type="hidden" name="id_theme" placeholder="Saisir le numéro de thème" value="{{ article.id_theme }}">
+
+
+			<input type="submit" value="Modifier article">
+
+		</ul>
+	</form>
+{% endblock %}

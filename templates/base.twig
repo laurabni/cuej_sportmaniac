@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/header.css">
+		<link rel="stylesheet" href="./css/test.css">
+		<link rel="stylesheet" href="./css/accueil.css">
+		<link rel="shortcut icon" media="screen" src="./images/icone_navig.png">
+		<link rel="stylesheet" href="./css/base.css"> {% block css %}{% endblock %}
+		<!-- GOOGLE FONT -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@400;500;600;700;800;900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+		<!-- ////////////// -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@900&family=Karla&display=swap" rel="stylesheet">
+
+		
+
+		<title>CUEJ SPORT</title>
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar fixed-top">
+				<div class="container-menu-un">
+					<button class="navbar-toggler border-0 bouton-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+						<i class="bi bi-grid-fill icone-toggler {{article.couleur}}"></i>
+						{% block edito %}{% endblock %}
+					</button>
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width: 100%">
+						<div class="offcanvas-header bg-black">
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body bg-black">
+							<div class="container-menu py-5 pt-md-0 px-5 px-md-3">
+								<div class="row">
+
+									{% for theme in themes %}
+										<div class="col-sm-1 col-md-6 col-lg-4 mb-5">
+											<h5 class="{{theme.couleur}} text-white">{{theme.theme}}</h5>
+											{% for article in theme.articles %}
+												<div class="d-flex" >
+													<a class="item-menu" href="index.php?page=article&action=read&id={{article.id }}">
+														<p class="text-white">{{article.titre}}
+														<img src="./images/ICONE_SVG/{{article.type1}}" class="icon-type">
+														{% if article.type2 %}
+															<img src="./images/ICONE_SVG/{{article.type2}}" class="icon-type">
+														{% endif %}
+														{% if article.type3 %}
+															<img src="./images/ICONE_SVG/{{article.type3}}" class="icon-type">
+														{% endif %}
+														</p>
+													</a>
+
+												</div>
+
+											{% endfor %}
+										</div>
+										
+									{% endfor %}
+
+									<div>
+										<ul class="list-unstyled boutons-menu">
+											<li class="mb-2">
+												<a href="index.php?page=edito" class="btn btn-outline-light rounded-pill">Édito</a>
+											</li>
+											<li class="mb-2">
+												<a href="index.php?page=accueil" class="btn btn-outline-light rounded-pill">Accueil</a>
+											</li>
+											<li class="mb-2">
+												<a href="index.php?page=credit" class="text-white">© Crédits</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			{% block header %}{% endblock %}
+		</header>
+
+		<main>
+			{% block main %}{% endblock %}
+		</main>
+
+
+		<footer
+			class="{{themes[article.id_theme - 1].couleur}}">
+
+			
+			{% block footer %}
+			{% endblock %}
+			
+			<div class="mt-2">
+				<a href="index.php?page=credit" class="me-3 my-4 text-white">© Crédits</a>
+				|
+				<a href="https://cuej.unistra.fr/mentions-legales/" target="_blank"class="ms-3 my-4 text-white">Mentions légales</a>
+			</div>
+
+		</footer>
+
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+			<script src="./src/js/main.js"></script>
+
+			<script>
+
+				// Progression Bar
+				window.addEventListener('scroll', function () {
+				const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+				const scrolled = (window.scrollY / scrollableHeight) * 100;
+				document.getElementById('progressBar').style.width = scrolled + '%';
+				});
+
+				// Sélectionne toutes les images avec la classe 'image-float'
+				const floatImages = document.querySelectorAll('.image-float');
+
+				// Ajoute un écouteur d'événement à chaque image
+				floatImages.forEach(function (image) {
+				image.addEventListener('click', function () { // Applique l'effet de zoom à l'image cliquée
+				image.classList.toggle('zoomed');
+				});
+				});
+
+			</script>
+		</body>
+	</html>
+</body></html>

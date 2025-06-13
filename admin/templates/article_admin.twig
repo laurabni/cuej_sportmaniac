@@ -1,0 +1,59 @@
+{% extends "base.twig" %}
+
+{% block main %}
+{% if theme != null %}
+<h1>Articles du thème {{theme.theme}}</h1>
+<table>
+	<tr>
+		<th>Articles</th>
+		<th>Image</th>
+		<th>Vidéo</th>
+		<th>Actions</th>
+	</tr>
+	{% for article in articles %}
+	<tr>
+		<td class="texte">{{article.titre}}</td>
+		<td>
+			{% if article.image %}
+			<img src="../images/uploads/{{article.image}}">
+			{% endif %}
+		</td>
+		<td>
+			{% if article.video %}
+			<video controls>
+				<source src="../images/uploads/{{ article.video }}" type="video/mp4">
+			</video>
+			{% endif %}
+		</td>
+		<td>
+			<a class="btn btn-secondary" href="index.php?page=article&action=read&id={{ article.id }}"><i
+					class="bi bi-eye-fill"></i>
+				Voir les éléments</a>
+			<a class="btn btn-secondary" href="index.php?page=article&action=edit&id={{ article.id }}"><i
+					class="bi bi-pencil-fill"></i>
+				Modifier</a>
+			{# <a class="btn btn-secondary" href="index.php?page=article&action=delete&id={{ article.id }}"><i
+					class="bi bi-trash3-fill"></i>
+				Supprimer</a> #}
+		</td>
+	</tr>
+	{% endfor %}
+	{# <tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>
+			<a class="btn btn-secondary" href="index.php?page=article&action=new&id={{theme.id}}"><i
+					class="bi bi-plus"></i> Ajouter un article</a>
+		</td>
+	</tr> #}
+</table>
+<p class="center">
+	<a class="btn btn-secondary" href="index.php?page=theme">Retour à la liste des thèmes</a>
+</p>
+{% else %}
+<p>Thème indéfini :
+	<a class="btn btn-secondary" href="index.php?page=theme">Retour à la liste des thèmes</a>
+</p>
+{% endif %}
+{% endblock %}

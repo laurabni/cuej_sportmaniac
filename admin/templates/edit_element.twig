@@ -1,0 +1,70 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2>Modifier un element</h2>
+	<form action="index.php?page=element&action=update" method="post" enctype="multipart/form-data">
+
+		<ul>
+			<input type="hidden" name="id" value="{{ element.id }}">
+			<li>
+				<label for="balise">Saisir la balise de votre Element</label>
+				<input type="text" name="balise" placeholder="Saisir un element" value="{{ element.balise }}">
+			</li>
+			<li>
+				<label for="contenu">Saisir votre contenu</label>
+				<textarea name="contenu" placeholder="Saisir un contenu" rows="10" cols="100">{{ element.contenu }}</textarea>
+			</li>
+			<li>
+				<label for="alt">Saisir le texte alternatif</label>
+				<input type="text" name="alt" placeholder="Saisir un texte alternatif" value="{{ element.alt}}">
+
+			</li>
+			<li>
+				<label for="image">Saisir votre photo</label>
+				<input type="file" name="image" placeholder="Saisir le nom de votre image ou audio" value="{{ element.image }}">
+
+			</li>
+			<li>
+				<label for="video">Saisir la vidéo</label>
+				<input type="file" name="video" placeholder="Saisir le nom de votre image ou audio" value="{{ element.video }}">
+
+			</li>
+
+			<li>
+				<label for="audio">Saisir l'audio</label>
+				<input type="file" name="audio" placeholder="Saisir le nom de votre image ou audio" value="{{ element.audio }}">
+
+			</li>
+
+			<li>
+				<label for="href">Saisir le nom de votre vidéo</label>
+				<input type="text" name="href" placeholder="Saisir le nom de votre vidéo" value="{{ element.href }}">
+
+			</li>
+			<li>
+				<label for="class">Saisir la mise en page</label>
+				<input type="text" name="class" value="{{ element.class }}">
+			</li>
+			<li>
+				<label for="class2">Saisir la position de l'image</label>
+				<input type="text" name="class2" value="{{ element.class2 }}">
+			</li>
+
+			<li>
+				<label for="class3">Saisir la mise en page de la légende</label>
+				<input type="text" name="class3" value="{{ element.class3 }}">
+			</li>
+
+			<li>
+				<label for="credit">Rentrer le crédit de la vidéo, l'image ou l'audio</label>
+				<input type="text" name="credit" value="{{ element.credit }}">
+
+			</li>
+			<input type="hidden" name="id_article" placeholder="Saisir l'ID" value="{{ element.id_article }}">
+
+
+			<input type="submit" value="Modifier élément">
+
+		</ul>
+	</form>
+{% endblock %}

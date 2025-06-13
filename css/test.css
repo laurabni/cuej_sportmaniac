@@ -1,0 +1,675 @@
+/* font-family: 'Inria Sans', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Karla', sans-serif; */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 10px;
+    /* background-color: #FCB131; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.bouton-toggler {
+    margin: 0;
+}
+
+.icone-toggler {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+
+    .icone-toggler {
+        font-size: 1rem;
+        font-weight: bold;
+    
+    }
+}
+
+.icone-toggler.vert {
+    color: #009B72;
+}
+
+.icone-toggler.rouge {
+    color: #E85D75;
+}
+
+.icone-toggler.violet {
+    color: #A469DE;
+}
+
+.icone-toggler.jaune {
+    color: #EAA633;
+}
+
+.icone-toggler.bleu {
+    color: #009DDC;
+}
+
+.progress-bar.credit {
+    background-color: black;
+}
+
+.progress-bar.violet {
+    background-color: #A469DE;
+}
+
+.progress-bar.bleu {
+    background-color: #009DDC;
+}
+
+.progress-bar.rouge {
+    background-color: #E85D75;
+}
+
+.progress-bar.vert {
+    background-color: #009B72;
+}
+
+.progress-bar.jaune {
+    background-color: #EAA633;
+}
+
+header {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
+}
+
+.title-2 {
+    font-weight: 900;
+    font-size: 20pt;
+    width: fit-content;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.title-2.credit {
+    border-bottom: solid 3px black;
+}
+
+.title-2.violet {
+    border-bottom: solid 3px #A469DE;
+}
+
+.title-2.vert {
+    border-bottom: solid 3px #009B72;
+}
+
+.title-2.bleu {
+    border-bottom: solid 3px #009DDC;
+}
+
+.title-2.rouge {
+    border-bottom: solid 3px #E85D75;
+}
+
+.title-2.jaune {
+    border-bottom: solid 3px #EAA633;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header img {
+    width: 100%;
+}
+
+/* Utilisation du point pour les classes chapo et titre */
+.chapo {
+    font-weight: 700;
+    font-size: 15pt;
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .chapo {
+        font-weight: 700;
+        font-size: 12pt;
+        margin-bottom: 80px;
+    }
+
+
+}
+
+
+.intertitre {
+    font-weight: bold;
+    font-family: 'Glory', sans-serif;
+    font-size: 25pt;
+    padding-left: 20px;
+    margin: 80px 0 30px 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    .intertitre {
+        font-weight: bold;
+        font-family: 'Glory', sans-serif;
+        font-size: 20pt;
+        padding-left: 10px;
+        margin: 40px 0 15px 0;
+    }
+
+}
+
+.intertitre.credit {
+    border-left: solid 4px black;
+}
+
+.intertitre.violet {
+    border-left: solid 4px #A469DE;
+}
+
+.intertitre.rouge {
+    border-left: solid 4px #E85D75;
+}
+
+.intertitre.bleu {
+    border-left: solid 4px #009DDC;
+}
+
+.intertitre.vert {
+    border-left: solid 4px #009B72;
+}
+
+.intertitre.jaune {
+    border-left: solid 4px #EAA633;
+}
+
+.legende {
+    font-weight: 200;
+    font-family: 'Krub', sans-serif;
+}
+
+.centered {
+    width: 100%;
+}
+
+.legende-centered {
+    text-align: center;
+}
+
+.paragraphe {
+    font-size: 15pt;
+    margin-bottom: 2rem;
+    font-family: 'Krub', sans-serif;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 480px) {
+
+    .paragraphe {
+        font-size: 11pt;
+        margin-bottom: 1rem;
+        font-family: 'Krub', sans-serif;
+        font-weight: 200;
+    }
+
+
+}
+
+.credit-right {
+    text-align: right;
+    display: block;
+}
+
+.video__body {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.video__verticale {
+    width: 35%;
+    margin: 0 2rem 2rem 0;
+    float: left;
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Styles pour les écrans de largeur inférieure à 480px */
+    .video__verticale {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        border: #009B72 solid 1px;
+    }
+}
+
+.legende-encadre {
+    color: white;
+}
+
+.image-portrait {
+    width: 300px;
+    height: 450px;
+    margin: 0 2rem 0 0;
+}
+
+.citation {
+    padding: 3rem;
+    /* border: #FCB131 solid 3px; */
+    text-align: center
+}
+
+.citation__paragraphe {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: block;
+    font-weight: 500;
+    padding: 2rem;
+    font-size: 20pt;
+    /* font-style: italic; */
+    text-align: center;
+}
+
+/* .citation__paragraphe.violet {
+    border: solid 3px #A469DE;
+}
+
+.citation__paragraphe.rouge {
+    border: solid 3px #E85D75;
+}
+
+.citation__paragraphe.vert {
+    border: solid 3px #009B72;
+}
+
+.citation__paragraphe.bleu {
+    border: solid 3px #009DDC;
+}
+
+.citation__paragraphe.jaune {
+    border: solid 3px #EAA633;
+} */
+
+.citation__legende {
+    padding: 2rem 0 2rem 2rem;
+    font-weight: 500;
+    font-size: 20pt;
+    font-style: normal;
+    margin-bottom: 30px;
+    /* border-bottom: solid 3px #FCB131;
+    border-left: solid 3px #FCB131;
+    border-right: solid 3px #FCB131; */
+}
+
+.citation__legende.violet {
+    border-bottom: solid 3px #A469DE;
+    border-left: solid 3px #A469DE;
+    border-right: solid 3px #A469DE;
+}
+
+
+/* IMAGES FLOAT */
+
+.image-float {
+    margin: 25px 0;
+    width: 50%;
+    cursor: pointer;
+}
+
+.image-float.zoomed {
+    width: 100%;
+    /* Ajuste la taille pour le zoom (tu peux utiliser d'autres propriétés pour un effet de zoom) */
+    transition: width 0.3s ease;
+    /* Animation de transition pour un effet fluide */
+}
+
+.image-float--left {
+    width: 30%;
+    float: left;
+    margin: 0 2rem 2rem 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    .image-float--left {
+        width: 100%;
+        float: center;
+        margin: 0 2rem 2rem 0;
+    }
+
+}
+
+.image-float--right {
+    width: 40%;
+    float: right;
+    margin: 0 0 1rem 2rem
+}
+
+@media screen and (max-width: 480px) {
+
+    .image-float--right {
+        width: 100%;
+        float: center;
+        margin: 1rem 0;
+    }
+
+}
+
+.image-float--center {
+    width: 75%;
+    float: center;
+    margin: 0 auto 30px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .image-float--center {
+        width: 100%;
+        float: center;
+        margin: 0 auto 30px;
+    }
+
+}
+
+
+.image-float--encadre {
+    width: 25%;
+    float: left;
+    margin: 25px;
+}
+
+.image-float--podcast {
+    width: 60%;
+    float: center;
+    margin: 0 auto 30px;
+    box-shadow: 0px;
+    box-shadow: 0 0 20px #0000001a;
+}
+
+@media screen and (max-width: 480px) {
+
+    .image-float--podcast {
+        width: 100%;
+        float: center;
+        margin: 0 auto 30px;
+        box-shadow: 0px;
+        box-shadow: 0 0 20px #0000001a;
+    }
+
+}
+
+.image-float__img {
+    width: 100%;
+}
+
+/* ENCADRE */
+
+.encadre__titre {
+    font-size: 20pt;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    /* background-color: #FCB131; */
+}
+
+.encadre__image {
+    float: left;
+    width: 25%;
+}
+
+.encadre__image.violet {
+    background-color: #A469DE;
+}
+
+.encadre__image.bleu {
+    background-color: #009DDC;
+}
+
+.encadre__image.vert {
+    background-color: #009B72;
+}
+
+.encadre__image.rouge {
+    background-color: #E85D75;
+}
+
+.encadre__image.jaune {
+    background-color: #EAA633;
+}
+
+.encadre__paragraphe {
+    font-size: 15pt;
+    font-family: 'Krub', sans-serif;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 2rem;
+    /* background-color: #FCB131; */
+    padding: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+
+    .encadre__paragraphe {
+        font-size: 11pt;
+        font-family: 'Krub', sans-serif;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 1rem;
+        /* background-color: #FCB131; */
+        padding: 1rem;
+    }
+
+
+}
+
+
+.encadre__paragraphe.violet {
+    background-color: #A469DE;
+}
+
+.encadre__paragraphe.bleu {
+    background-color: #009DDC;
+}
+
+.encadre__paragraphe.vert {
+    background-color: #009B72;
+}
+
+.encadre__paragraphe.rouge {
+    background-color: #E85D75;
+}
+
+.encadre__paragraphe.jaune {
+    background-color: #EAA633;
+}
+
+/* ---------- PODCAST --------------- */
+/* Styles généraux pour le lecteur audio */
+.audioplayer {
+    max-width: 70%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+    display: none;
+}
+
+.custom-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    font-size: 16px;
+    width: 30%;
+}
+
+@media screen and (max-width: 480px) {
+
+    .custom-controls {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem auto;
+        font-size: 16px;
+        width: 70%;
+    }
+
+}
+
+.curent-time {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+
+.total-time {
+    font-family: 'Karla', sans-serif;
+}
+
+.music {
+    display: none;
+}
+
+.progression {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 1px;
+    /* Hauteur de la barre de progression */
+    border-radius: 5px;
+    /* Coins arrondis */
+    background-color: #fff;
+    /* Couleur bouton */
+    border: 1px solid #e85d75;
+    /* Bordure de la barre de progression (couleur déjà vue) */
+
+    /* Styles spécifiques à Safari */
+    appearance: none;
+}
+
+
+.progression::-webkit-slider-thumb {
+    width: 15px;
+    /* Largeur du "pouce" */
+    height: 15px;
+    /* Hauteur du "pouce" */
+    background-color: #e85d75;
+    /* Couleur du "pouce" */
+    border: 2px solid #2ecc71;
+    /* Bordure verte du "pouce" */
+    border-radius: 50%;
+    /* Forme circulaire */
+    cursor: pointer;
+    /* Curseur personnalisé */
+}
+
+.progression::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    /* Couleur du "pouce" */
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.progression::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    /* Couleur du "pouce" */
+    border: 2px solid #2ecc71;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.image_container,
+.titre_container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image_podcast {
+    height: 300px;
+    width: 400px;
+}
+
+.time {
+    /* margin: 0 auto; */
+    width: 20%;
+    margin: auto;
+    /* margin-bottom: 60px; */
+}
+
+.podcast {
+    border: 2px solid #e85d75;
+    /* Bordure grise */
+    border-radius: 10px;
+    /* Coins arrondis */
+    padding: 20px;
+    /* Espace intérieur */
+    box-shadow: 0 0 20px #0000001a;
+    /* Légère ombre */
+    margin: 20px auto;
+    /* Centré horizontalement avec une marge extérieure */
+    max-width: 60%;
+    /* Largeur maximale */
+    appearance: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    .podcast {
+        border: 2px solid #e85d75;
+        /* Bordure grise */
+        border-radius: 10px;
+        /* Coins arrondis */
+        padding: 10px;
+        /* Espace intérieur */
+        box-shadow: 0 0 20px #0000001a;
+        /* Légère ombre */
+        margin: 20px auto;
+        /* Centré horizontalement avec une marge extérieure */
+        max-width: 100%;
+        /* Largeur maximale */
+        appearance: none;
+    }
+
+}
+
+/* Style spécifique à la couleur de la barre de progression sur Safari */
+@media not all and (min-resolution:.001dpcm) {
+    .progression {
+        background-color: #E85D75;
+    }
+}
+
+.icones-credit {
+    background-color: black;
+}
+
+/* LOGO CREDITS*/
+.logo {
+    justify-content: space-between;
+    /* Pour espacer les logos  */
+    align-items: center;
+    margin-left: 400px;
+    margin-right: 300px;
+    margin-top: 30px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block main %}
+	<h2>Ajouter un thème</h2>
+    <form action="index.php?page=theme&action=create" method="post">
+    <ul>
+        <li>
+            <label for="theme">Saisisser le titre du thème</label>
+            <input type="text" name="theme" placeholder="Saisir un thème">
+        </li>
+        <li>
+            <label for="couleur">Saisir la couleur du thème</label>
+            <select name="couleur">
+                <option value="bleu">Bleu</option>
+                <option value="rouge">Rouge</option>
+                <option value="jaune">Jaune</option>
+                <option value="vert">Vert</option>
+                <option value="violet">Violet</option>
+            </select>
+        </li>
+
+        <input type="submit" value="Ajouter un thème">
+
+    </ul>
+    </form>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends 'base.twig' %}
+
+{% block css %}
+	<link rel="stylesheet" href="./css/accueil.css">
+{% endblock %}
+
+{% block main %}
+<div>
+	<div class="menu-desktop">
+		<div class="container_accueil">
+			<img class="image_fond" src="./images/accueil/vestiaire_vide.jpg">
+
+			<img class="jo" src="./images/PNG_Items/JO.png" id="myBtn">
+			<img class="polaroid" src="./images/PNG_Items/Polaroid-.png" id="myBtn1">
+			<img class="serviette" src="./images/PNG_Items/Serviette.png" id="myBtn2">
+			<img class="sportif" src="./images/PNG_Items/Sportif.png" id="myBtn3">
+			<img class="trousse" src="./images/PNG_Items/TrousseSecours.png" id="myBtn4">
+
+			<img class="titre" src="./images/accueil/logo-accueil-2.png">
+		</div>
+
+	
+		<div id="myModal" class="modal">
+			<div class="clic__bg clic__bg--jo">
+				<span class="close">&times;</span>
+				<h1 class="clic__title clic__title--jo text-uppercase">JO en VF</h1>
+				<ul class="menu_articles">
+					<li>
+						<a href="index.php?page=article&action=read&id=3" class="clic__subtitle">Disciplines olympiques: t’es in, t’es out<img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+					<li>
+						<a href="index.php?page=article&action=read&id=4" class="clic__subtitle">Des labels à la pelle<img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+					<li>
+						<a href="index.php?page=article&action=read&id=5" class="clic__subtitle">Jeux d'hiver écolos, le dilemme des Alpes<img class="icon-type--accueil" src="./images/ICONE_SVG/video.svg"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="myModal1" class="modal1">
+			<div class="clic__bg clic__bg--polaroid">
+				<span class="close1">&times;</span>
+				<h1 class="clic__title clic__title--polaroid text-uppercase">Affaires de familles</h1>
+				<ul class="menu_articles">
+					<li>
+						<a href="index.php?page=article&action=read&id=8" class="clic__subtitle">Cavalier·es pur-sang<img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"><img class="icon-type--accueil" src="./images/ICONE_SVG/micro.svg"></a>
+					</li>
+					<li>
+						<a href="index.php?page=article&action=read&id=9" class="clic__subtitle">Tu seras championne, ma fille<img class="icon-type--accueil" src="./images/ICONE_SVG/micro.svg"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="myModal2" class="modal2">
+			<div class="clic__bg clic__bg--serviettes">
+				<span class="close2">&times;</span>
+				<h1 class="clic__title clic__title--serviettes text-uppercase">Terrains d'égalité</h1>
+				<ul class="menu_articles">
+					<li>
+						<a href="index.php?page=article&action=read&id=10" class="clic__subtitle">Toustes ensemble!<img class="icon-type--accueil" src="./images/ICONE_SVG/video.svg"><img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+					<li>
+						<a href="index.php?page=article&action=read&id=11" class="clic__subtitle">Garges, à fond l’inclusion<img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+					<li>
+						<a href="index.php?page=article&action=read&id=12" class="clic__subtitle">Athlètes handisport: rêves bridés<img class="icon-type--accueil" src="./images/ICONE_SVG/video.svg"><img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="myModal3" class="modal3">
+			<div class="clic__bg clic__bg--sportif">
+				<span class="close3">&times;</span>
+				<h1 class="clic__title clic__title--sportif text-uppercase">No gain no game</h1>
+				<ul class="menu_articles">
+					<li>
+						<a href="index.php?page=article&action=read&id=6" class="clic__subtitle">Quelle vie après le vestiaire?<img class="icon-type--accueil" src="./images/ICONE_SVG/video.svg"></a>
+					</li>
+					<li>
+						<a href="index.php?page=article&action=read&id=7" class="clic__subtitle" style="width: 75%;">Amateurs cherchent sponsors désespérément<img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="myModal4" class="modal4">
+			<div class="clic__bg clic__bg--trousse">
+				<span class="close4">&times;</span>
+				<h1 class="clic__title clic__title--trousse text-uppercase">Sportez-vous mieux</h1>
+				<ul class="menu_articles">
+					<li>
+						<a href="index.php?page=article&action=read&id=1" class="clic__subtitle">Ligament croisé: footeuses au point de rupture<img class="icon-type--accueil" src="./images/ICONE_SVG/video.svg"><img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+					<li>
+						<a href="index.php?page=article&action=read&id=2" class="clic__subtitle">Transpithérapie<img class="icon-type--accueil" src="./images/ICONE_SVG/video.svg"><img class="icon-type--accueil" src="./images/ICONE_SVG/texte.svg"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+	</div>
+
+	<div class="menu-phone">
+	<img src="./images/accueil/page_accueil_telephone.jpg">
+	<img class="logo-index" src="./images/accueil/logo-accueil-2.png">
+	<a href="index.php?page=edito" class="bouton-index-phone">Voir l'édito</a>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,176 @@
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    body {
+        font-family: 'Glory', sans-serif;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Karla', sans-serif;
+    }
+
+
+    /* MENU */
+    nav {
+        margin-top: 20px;
+    }
+
+    .container-menu {
+        width: 90%;
+        margin: auto;
+    }
+
+    .icon-type {
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+
+    .icon-type--accueil {
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+    }
+
+    h5 {
+        font-size: 20pt;
+        margin: 1rem 0;
+        padding: 3px 0 3px 1rem;
+        font-family: 'Inter', sans-serif;
+        text-transform: uppercase;
+    }
+
+    h5.bleu {
+        border-left: solid 5px #009DDC;
+    }
+
+    h5.jaune {
+        border-left: solid 5px #EAA633;
+    }
+
+    h5.rouge {
+        border-left: solid 5px #E85D75;
+    }
+
+    h5.violet {
+        border-left: solid 5px #A469DE;
+    }
+
+    h5.vert {
+        border-left: solid 5px #009B72;
+    }
+
+    .item-menu {
+        font-size: 15pt;
+    }
+
+    .boutons-menu {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+
+    /* Animation de barre blanche au survol */
+    .item-menu p {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    .item-menu p::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        /* Barre initialement invisible */
+        height: 1px;
+        /* Épaisseur de la barre */
+        background-color: white;
+        /* Couleur de la barre */
+        transition: width 0.3s ease;
+        /* Animation du déploiement */
+    }
+
+    .item-menu p:hover::after {
+        width: 100%;
+        /* Barre qui se déploie de gauche à droite au survol */
+    }
+
+
+
+    /* FOOTER */
+
+    footer.bleu {
+        background-color: #009DDC;
+    }
+
+    footer.jaune {
+        background-color: #EAA633;
+    }
+
+    footer.rouge {
+        background-color: #E85D75;
+    }
+
+    footer.violet {
+        background-color: #A469DE;
+    }
+
+    footer.vert {
+        background-color: #009B72;
+    }
+
+    footer {
+        text-align: center;
+        color: white;
+        display: block;
+    }
+
+
+    @media screen and (max-width: 480px) {
+
+        footer {
+            text-align: center;
+            color: white;
+            display: none;
+        }
+    }
+
+    .item-footer {
+        width: 75%;
+    }
+
+    .ensemble-footer {
+        display: flex;
+        margin: 30px auto;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    .img_footer {
+        width: auto;
+        height: 8rem;
+    }
+
+    .media-credit {
+        display: flex;
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .media-credit {
+            display: flex;
+            flex-direction: column;
+        }
+    }
